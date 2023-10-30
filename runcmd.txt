@@ -1,0 +1,11 @@
+create table public.claims(claim_id integer ,claim_date date,member_id integer,claim_status char(1));
+create table public.drugs(drug_id integer , drug_name char(30), drug_price decimal (9,3));
+create table public.member (member_id integer, member_name char(90),member_dob date);
+
+insert into public.claims values ('1','2023-10-30',1,'P');
+insert into  public.drugs values(1023,'paracetamol',50.9);
+
+
+alter table public.claims replica identity full;
+alter table public.drugs replica identity full;
+alter table public.member replica identity full;
